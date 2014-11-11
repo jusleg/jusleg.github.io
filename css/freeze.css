@@ -872,7 +872,7 @@ section#features .media.active .media-heading {
   color: #66cdcc;
 }
 section#reviews {
-  background: url("../img/freeze/bk-freeze.jpg");
+  background: url("../img/bg/bk.jpg");
 }
 section#reviews header {
   color: #ffffff;
@@ -940,7 +940,7 @@ section#demo header h1:after {
 }
 /* Get app Section */
 section#getApp {
-  background: url("../img/freeze/bk-freeze-ga.jpg");
+  background: url("../img/bg/bk-ga.jpg");
 }
 section#getApp header {
   color: #ffffff;
