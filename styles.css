@@ -88,12 +88,10 @@ slideUp
 	-webkit-animation-name: slideUp;	
 	animation-duration: 1.5s;	
 	-webkit-animation-duration: 1.5s;
-	animation-delay: 6s;
-	-webkit-animation-delay: 6s;
-	-vendor-animation-delay: 6s;
+	
 	animation-timing-function: ease;	
 	-webkit-animation-timing-function: ease;
-
+	animation-delay: 2s;
 	visibility: visible !important;			
 }
 
