@@ -86,7 +86,7 @@ slideUp
 .slideUp{
 	animation-name: slideUp;
 	-webkit-animation-name: slideUp;	
-
+	animation-delay:6.3s;
 	animation-duration: 1.5s;	
 	-webkit-animation-duration: 1.5s;
 
