@@ -18,6 +18,8 @@ slideDown
 ==============================================
 */
 
+#appear{ display: none; }
+
 
 .slideDown{
 	animation-name: slideDown;
