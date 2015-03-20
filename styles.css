@@ -91,7 +91,6 @@ slideUp
 	
 	animation-timing-function: ease;	
 	-webkit-animation-timing-function: ease;
-	animation-delay: 2s;
 	visibility: visible !important;			
 }
 
