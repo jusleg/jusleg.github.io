@@ -15,6 +15,7 @@ justin@justinaguilar.com
 
 
 
+#app{ display: none; }
 
 
 
@@ -34,13 +35,13 @@ html, body, .container {
     margin-top: -70px;
 }
 
-#footer {
+.footer {
 position:fixed;
 bottom:5px;
 text-align: center ;
 font-size: 16px ;
 font-family: verdana ;
 width:100% ;
-visibility: hidden;
+
 }
 
