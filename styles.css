@@ -19,8 +19,7 @@ justin@justinaguilar.com
 	-webkit-animation-name: slideUp;	
 	animation-duration: 4s;	
 	-webkit-animation-duration: 4s;
-	animation-delay: 2s;
-	-webkit-animation-delay: 2s;
+	
 	animation-timing-function: ease;	
 	-webkit-animation-timing-function: ease;
 	visibility: visible !important;			
