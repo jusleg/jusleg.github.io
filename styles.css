@@ -1,16 +1,4 @@
-/*
-==============================================
-CSS3 ANIMATION CHEAT SHEET
-==============================================
 
-Made by Justin Aguilar
-
-www.justinaguilar.com/animations/
-
-Questions, comments, concerns, love letters:
-justin@justinaguilar.com
-==============================================
-*/
 #appear{ display: none; }
 
 
@@ -18,7 +6,21 @@ justin@justinaguilar.com
 #app{ display: none; }
 #apps{ display: none; }
 
+.resize{
+    width:50%; /* you can use % */
+    height: auto;
+     display: inline-block;
+    vertical-align: middle;
+    display: none;
+}
 
+.Centerer
+{
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    
+}
 
 html, body, .container {
     height: 100%;
@@ -35,6 +37,29 @@ html, body, .container {
     margin-top: -70px;
 }
 
+body {
+  /* Location of the image */
+  background-image: url(http://i.imgur.com/NO4uV3Z.png);
+  
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+  
+  /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+  
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #5FC1E7;
+}
+
 .footer {
 position:fixed;
 bottom:5px;
@@ -44,4 +69,3 @@ font-family: verdana ;
 width:100% ;
 
 }
-
