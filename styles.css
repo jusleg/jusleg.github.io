@@ -7,7 +7,7 @@
 #apps{ display: none; }
 
 .resize{
-    width:50%; /* you can use % */
+    width:40%; /* you can use % */
     height: auto;
      display: inline-block;
     vertical-align: middle;
