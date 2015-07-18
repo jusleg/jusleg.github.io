@@ -1,58 +1,88 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
-<head>
-    <title>Why Not</title>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Responsive HTML5 Website landing Page for Developers">
-    <meta charset="UTF-8">
-    <meta name="description" content="Social network startup based on user documenting their activities collectively">
-	<meta name="keywords" content="Why,Not, Whynot, Why not, Social, Network, Startup, Activities, Documenting, app, Ios,Justin,Leger,camera, photo">
-	<meta name="author" content="Why Not Communications G.P.">
-    <link rel="shortcut icon" href="favicon.ico">  
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'> 
-    <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="styles.css">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <style type="text/css">
-	html {
-       overflow: none;
-	}
+<meta charset="utf-8">
+<header>
+<title>Justin Léger</title>
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Developper. Co-founder of WhyNot. Startup guy. Fun to hang out with.">
+<meta name="keywords" content="Justin Leger, Justin Léger, Justin, Leger, Léger, Why not, Startup, Entrepreneur, Montreal, montréal, WhyNot, jusleg, juslleg, twitter, linkedin">
+<meta name="author" content="Justin Leger">  
+<link rel="shortcut icon" href="favicon.ico">  
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+<style>
+body {
+  margin: 0;
+  background-color:#222;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+rect {
+  fill: none;
+  pointer-events: all;
+}
+circle {
+  fill: none;
+  stroke-width: 2.5px;
+}
+.footer {
+position:fixed;
+bottom:30%;
+text-align: 50%;
+left:10%;
+font-size: 2em ;
+font-family: verdana ;
+width:80% ;
+}
+a:hover {
+  border-bottom: 2px solid #00CCFF;
+}
+a{
+  color: #00CCFF;
+  text-decoration: none
+}
 </style>
- <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-    <script type="text/javascript"> 
-      $(document).ready( function() {
-        $('#delete').delay(2000).fadeOut();
-        $('#delete2').delay(2400).fadeOut();
-        $('.resize').delay(2900).fadeIn();
-        $('#app').delay(3000).fadeIn();
-      });
-    </script>
-</head> 
+</header>
 
 <body>
-	
-	<div class="container">
-	<div class="container">
-    	<p><font face="raleway" id="delete2" size="40em" color="white">Why Not</font><br><font face="lato" id="delete" color="white">Happening this spring<a href="http://j.mp/chevilles" style="color: white; text-decoration: none">.</a></font> </p>
-    	<span class="Centerer"></span>
-    	<img src="http://i.imgur.com/lcSh5hN.png" alt="Smiley face" class="resize">
-    	
-	</div>
-	</div>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+var width = Math.max(2000, innerWidth),
+    height = Math.max(2000, innerHeight);
+var i = 0;
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+svg.append("rect")
+    .attr("width", width)
+    .attr("height", height)
+    .on("ontouchstart" in document ? "touchmove" : "mousemove", particle);
+function particle() {
+  var m = d3.mouse(this);
+  svg.insert("circle", "rect")
+      .attr("cx", m[0])
+      .attr("cy", m[1])
+      .attr("r", 1e-6)
+      .style("stroke", d3.hsl((i = (i + 1) % 360), 1, .5))
+      .style("stroke-opacity", 1)
+    .transition()
+      .duration(2000)
+      .ease(Math.sqrt)
+      .attr("r", 100)
+      .style("stroke-opacity", 1e-6)
+      .remove();
+  d3.event.preventDefault();
+}
+</script>
 </body>
-
 <footer>
 	<div class="footer" align="center">
-		<font face="lato" id="app" color="gray"><a href="http://twitter.com/AppWhyNot" style="color:white; text-decoration: none">Twitter</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://jusleg.typeform.com/to/lYE7U4" style="color: white; text-decoration: none">Get&nbsp;Updates</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:getwhynot@gmail.com" style="color: white ;text-decoration: none">Contact&nbsp;Us</a></font></div>
+      <font face="lato" id="app" color="white">Justin Leger<br><br>
+      I'm a full-time student learning software engineering.<br>I co-founded <a href="http://getwhynot.ca">WhyNot</a> with some friends<br></font>
+		  <font face="lato" id="app" color="gray"><a href="http://twitter.com/jusleg">&nbsp;Twitter&nbsp;</a> <a href="https://github.com/jusleg">&nbsp;Github&nbsp;</a> <a href="mailto:juslleg@gmail.com">&nbsp;Email&nbsp;</a></font>
+  </div>
+
 </footer>
+</html>
