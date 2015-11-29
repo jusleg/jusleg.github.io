@@ -1,88 +1,189 @@
+
 <!DOCTYPE html>
-<meta charset="utf-8">
-<header>
-<title>Justin Léger</title>
-<link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Developper. Co-founder of WhyNot. Startup guy. Fun to hang out with.">
-<meta name="keywords" content="Justin Leger, Justin Léger, Justin, Leger, Léger, Why not, Startup, Entrepreneur, Montreal, montréal, WhyNot, jusleg, juslleg, twitter, linkedin">
-<meta name="author" content="Justin Leger">  
-<link rel="shortcut icon" href="favicon.ico">  
-<link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
-<style>
-body {
-  margin: 0;
-  background-color:#222;
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-rect {
-  fill: none;
-  pointer-events: all;
-}
-circle {
-  fill: none;
-  stroke-width: 2.5px;
-}
-.footer {
-position:fixed;
-bottom:30%;
-text-align: 50%;
-left:10%;
-font-size: 2em ;
-font-family: verdana ;
-width:80% ;
-}
-a:hover {
-  border-bottom: 2px solid #00CCFF;
-}
-a{
-  color: #00CCFF;
-  text-decoration: none
-}
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" media="screen" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" media="screen" rel="stylesheet" />
+
+
+    <style>
+      *{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,caption,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent}article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}html{font-size:16px;line-height:24px;width:100%;height:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;overflow-y:scroll;overflow-x:hidden}img{vertical-align:middle;max-width:100%;height:auto;border:0;-ms-interpolation-mode:bicubic}body{min-height:100%;-webkit-font-smoothing:subpixel-antialiased}.clearfix{clear:both;zoom:1}.clearfix:before,.clearfix:after{content:&quot;\0020&quot;;display:block;height:0;visibility:hidden}.clearfix:after{clear:both}
+
+    </style>
+    <style>
+  .yo{
+	color:#9B59B6;!important
+  }
+
+  .plain.error-page-wrapper {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color:#6355bc;
+    padding:0 5%;
+    position:relative;
+  }
+
+  .plain.error-page-wrapper .content-container {
+    -webkit-transition: left .5s ease-out, opacity .5s ease-out;
+    -moz-transition: left .5s ease-out, opacity .5s ease-out;
+    -ms-transition: left .5s ease-out, opacity .5s ease-out;
+    -o-transition: left .5s ease-out, opacity .5s ease-out;
+    transition: left .5s ease-out, opacity .5s ease-out;
+    max-width:400px;
+    position:relative;
+    left:-30px;
+    opacity:0;
+  }
+
+  .plain.error-page-wrapper .content-container.in {
+    left: 0px;
+    opacity:1;
+  }
+
+  .plain.error-page-wrapper .head-line {
+    transition: color .2s linear;
+    font-size:48px;
+    line-height:60px;
+    color:rgba(255,255,255,.2);
+    letter-spacing: -1px;
+    margin-bottom: 5px;
+  }
+  .plain.error-page-wrapper .subheader {
+    transition: color .2s linear;
+    font-size:36px;
+    line-height:46px;
+    color:#fff;
+  }
+  .plain.error-page-wrapper hr {
+    height:1px;
+    background-color: rgba(255,255,255,.2);
+    border:none;
+    width:250px;
+    margin:35px 0;
+  }
+  .plain.error-page-wrapper .context {
+    transition: color .2s linear;
+    font-size:18px;
+    line-height:27px;
+    color:#fff;
+  }
+  .plain.error-page-wrapper .context p {
+    margin:0;
+  }
+  .plain.error-page-wrapper .context p:nth-child(n+2) {
+    margin-top:12px;
+  }
+  .plain.error-page-wrapper .buttons-container {
+    margin-top: 45px;
+    overflow: hidden;
+  }
+  .plain.error-page-wrapper .buttons-container a {
+    transition: color .2s linear, border-color .2s linear;
+    font-size:14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:#fff;
+    border:2px solid white;
+    border-radius: 99px;
+    padding:8px 30px 9px;
+    display: inline-block;
+    float:left;
+  }
+  .plain.error-page-wrapper .buttons-container a:hover {
+    background-color:rgba(255,255,255,.05);
+  }
+  .plain.error-page-wrapper .buttons-container a:first-child {
+    margin-right:25px;
+  }
+
+  @media screen and (max-width: 485px) {
+    .plain.error-page-wrapper .header {
+      font-size:36px;
+     }
+    .plain.error-page-wrapper .subheader {
+      font-size:27px;
+      line-height:38px;
+     }
+    .plain.error-page-wrapper hr {
+      width:185px;
+      margin:25px 0;
+     }
+
+    .plain.error-page-wrapper .context {
+      font-size:16px;
+      line-height: 24px;
+     }
+    .plain.error-page-wrapper .buttons-container {
+      margin-top:35px;
+    }
+
+    .plain.error-page-wrapper .buttons-container a {
+      font-size:13px;
+      padding:8px 0 7px;
+      width:45%;
+      text-align: center;
+    }
+    .plain.error-page-wrapper .buttons-container a:first-child {
+      margin-right:10%;
+    }
+  }
 </style>
-</header>
+    <style>
 
-<body>
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script>
-var width = Math.max(2000, innerWidth),
-    height = Math.max(2000, innerHeight);
-var i = 0;
-var svg = d3.select("body").append("svg")
-    .attr("width", width)
-    .attr("height", height);
-svg.append("rect")
-    .attr("width", width)
-    .attr("height", height)
-    .on("ontouchstart" in document ? "touchmove" : "mousemove", particle);
-function particle() {
-  var m = d3.mouse(this);
-  svg.insert("circle", "rect")
-      .attr("cx", m[0])
-      .attr("cy", m[1])
-      .attr("r", 1e-6)
-      .style("stroke", d3.hsl((i = (i + 1) % 360), 1, .5))
-      .style("stroke-opacity", 1)
-    .transition()
-      .duration(2000)
-      .ease(Math.sqrt)
-      .attr("r", 100)
-      .style("stroke-opacity", 1e-6)
-      .remove();
-  d3.event.preventDefault();
-}
-</script>
-</body>
-<footer>
-	<div class="footer" align="center">
-      <font face="lato" id="app" color="white">Justin Leger<br><br>
-      I'm a full-time student learning software engineering.<br>I co-founded <a href="http://getwhynot.ca">WhyNot</a> with some friends<br></font>
-		  <font face="lato" id="app" color="gray"><a href="http://twitter.com/jusleg">&nbsp;Twitter&nbsp;</a> <a href="https://github.com/jusleg">&nbsp;Github&nbsp;</a> <a href="mailto:juslleg@gmail.com">&nbsp;Email&nbsp;</a></font>
-  </div>
+    .background-color {
+      background-color: rgba(255, 255, 255, 1) !important;
+    }
 
-</footer>
+
+    .primary-text-color {
+      color: rgba(128, 128, 128, 1) !important;
+    }
+
+    .secondary-text-color {
+      color: rgba(66, 66, 66, 1) !important;
+    }
+   .justin{
+      color: rgba(66, 66, 66, 1) !important;
+    }
+
+
+
+
+    .border-button {
+      color: rgba(128, 128, 128, 1) !important;
+      border-color: rgba(128, 128, 128, 1) !important;
+    }
+    .button {
+      background-color: rgba(128, 128, 128, 1) !important;
+      color: #FFFFFF !important;
+    }
+
+    .shadow {
+      box-shadow: 0 0 60px #000000;
+    }
+
+</style>
+  </head>
+  <body class="plain error-page-wrapper background-color background-image">
+    <div class="content-container">
+	<div class="head-line secondary-text-color">
+                Hey, I'm Justin!
+        </div>
+        <div class="subheader primary-text-color">
+                I'm studying software engineering at <strong>Concordia University</strong><br>
+        </div>
+        <div class="context primary-text-color">
+                <!-- doesn't use context_content because it's ALWAYS the same thing -->
+    		<p>
+       			You can find me there: <br>
+      			<a class="justin"href="http://twitter.com/jusleg"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;&nbsp;
+<a class="justin" href="http://github.com/jusleg"><i class="fa fa-github"></i></a>&nbsp;&nbsp;&nbsp;
+<a class="justin" href="http://medium.com/@jusleg"><i class="fa fa-medium"></i></a>&nbsp;&nbsp;&nbsp;
+<a class="justin" href="http://linkedin.com/in/legerjustin"><i class="fa fa-linkedin-square"></i></a>&nbsp;&nbsp;&nbsp;
+<a class="justin" href="mailto:hey@justinleger.ca"><i class="fa fa-envelope"></i></a>
+    		</p>
+			</div>
+</div>
+  </body>
 </html>
