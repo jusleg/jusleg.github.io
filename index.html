@@ -30,6 +30,33 @@
             }
         </script>
         
+        <script>
+            var counter = 0;
+            var stringValue="";
+            document.onkeypress = function (e) {
+            e = e || window.event;
+            if(e.keyCode==105){
+                counter++;
+                stringValue+="i";
+            }
+            if(e.keyCode==99){
+              counter++;
+              stringValue+="c";
+            }
+            if(e.keyCode==117){
+                counter++;
+                stringValue+="u";
+            }
+            if(stringValue.indexOf("icu")!=-1){
+                stringValue="";
+                window.open("http://instantcena.com");  
+            } else if(counter==3){
+                counter=0;
+                stringValue="";
+            }
+            };
+        </script>
+        
         <title>Justin Leger</title>
     </head>
     
