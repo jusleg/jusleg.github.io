@@ -4,6 +4,13 @@
         <meta charset="UTF-8">
         <link rel="canonical" href="https://www.jusleg.com">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <script type="text/javascript">
+            var host = "www.jusleg.com";
+            if ((host == window.location.host) && (window.location.protocol != "https:")){
+                window.location.protocol = "https";
+                console.log("switching");
+            }
+        </script> 
         <meta name="description" content="Software engineering student. Html ninja. I can also write great meta descriptions.">
         <meta name="keywords" content="Justin Leger,Justin,Leger,Software Engineer,Software Engineering, hackathon,iot,ethereum">
         <meta name="author" content="Justin Leger">
@@ -104,13 +111,6 @@
     </head>
     
     <body onload="setYear()">
-        <script type="text/javascript">
-            var host = "www.jusleg.com";
-            if ((host == window.location.host) && (window.location.protocol != "https:")){
-                window.location.protocol = "https";
-                console.log("switching");
-            }
-        </script> 
         <section class="fullHeight" id="welcome">
             <div class="text-center vertical-center blockRel"> 
             <p class="bigText" id="name">Hey! I'm Justin</p>
